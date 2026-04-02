@@ -8,9 +8,10 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./html:/var/www/html:rw
+      - ./www:/var/www:rw
       - ./ssl:/etc/apache2/ssl:rw
       - ./conf/default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./conf/a.hu.conf:/etc/apache2/sites-available/a.hu.conf
     depends_on:
       - db
 
