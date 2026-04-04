@@ -11,7 +11,7 @@ services:
       - ./www:/var/www:rw
       - ./ssl:/etc/apache2/ssl:rw
       - ./conf/default.conf:/etc/apache2/sites-enabled/000-default.conf
-      - ./conf/a.hu.conf:/etc/apache2/sites-available/a.hu.conf
+      - ./conf/available:/etc/apache2/sites-available
     depends_on:
       - db
     restart: always
